@@ -6,10 +6,10 @@ let nowDate = new Date();
 
 const workHoursHandler = (req, res, next) => {
   if (
-    nowDate.getDay() == 0
-    //|| nowDate.getDay() == 6 ||
-    // nowDate.getHours() < 9 ||
-    // nowDate.getHours() > 17
+    nowDate.getDay() == 0 ||
+    nowDate.getDay() == 6 ||
+    nowDate.getHours() < 9 ||
+    nowDate.getHours() > 17
   ) {
     return res.send("<h1>OUT OF WORK</h1>");
   }
